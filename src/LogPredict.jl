@@ -5,7 +5,7 @@ function LogPredict(θ;μ=0,σ=1,ξ=0.5)
       s=zeros(m)
       X=(X.-μ)./σ
       X=[ones(m) X]
-      p=sigmoid(X*θ)
+      p=Sigmoid(X*θ)
       s[p.>=ξ] .=1
         return s
     end

@@ -6,7 +6,7 @@ using LinearAlgebra
 
 export CostGradient, LogCostGradient, LogPredict, Predict, OneVsAll,
         OneVsAllPredict, MapFeature, PolyFeature,Sigmoid, Kmeans, FindCentroids,
-            ComputeCentroids
+            ComputeCentroids, SigmoidGradient, NNPredict, NNCostGradient
 
 include("CostGradient.jl")
 include("LogCostGradient.jl")
@@ -19,6 +19,9 @@ include("Sigmoid.jl")
 include("Kmeans.jl")
 include("FindCentroids.jl")
 include("ComputeCentroids.jl")
+include("NNPredict.jl")
+include("NNCostGradient.jl")
+
 
 
 
