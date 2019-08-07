@@ -2,11 +2,12 @@ module MachineLearning
 
 using Optim
 using LinearAlgebra
+using Distributions
 
 
 export CostGradient, LogCostGradient, LogPredict, Predict, OneVsAll,
         OneVsAllPredict, MapFeature, PolyFeature,Sigmoid, Kmeans, FindCentroids,
-            ComputeCentroids, SigmoidGradient, NNPredict, NNCostGradient
+            ComputeCentroids, SigmoidGradient, NNPredict, NNCostGradient, MeshGrid
 
 include("CostGradient.jl")
 include("LogCostGradient.jl")
@@ -21,6 +22,7 @@ include("FindCentroids.jl")
 include("ComputeCentroids.jl")
 include("NNPredict.jl")
 include("NNCostGradient.jl")
+include("MeshGrid.jl")
 
 
 
