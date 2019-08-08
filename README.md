@@ -176,3 +176,17 @@ p2=plot(D[:,1],D[:,2],seriestype = :scatter,group=km,  xlabel="X1", ylabel="X2",
 plot(p1,p2,layout=(1,2), size=(900,300))
 ```
 <img src="MachineLearning_EX9.PNG"><br>
+
+## Neural Networks
+
+You can perform a Neural network for Multiclass classification on any neuron structure.
+
+By having a training data of 5000 samples with 400 features and 10 labels to classify, a three-layer Neural Network can be trained with a similar syntax as previously explained
+
+```julia
+LayerStruct=[400,25,10]    
+C,G,ΘNparams=NNCostGradient(X,y,LayerStruct)
+Θi=rand(sum(Int,ΘNparams)).*0.24 .-0.12
+res=optimize(C,G,Θi,LBFGS(),inplace = false)
+pn=NNPredict(res.minimizer,LayerStruct)
+```
