@@ -185,7 +185,7 @@ By having a training data of 5000 samples with 400 features and 10 labels to cla
 
 ```julia
 LayerStruct=[400,25,10]    
-C,G,ΘNparams=NNCostGradient(X,y,LayerStruct)
+C,G,ΘNparams=NNCostGradient(X,y,LayerStruct,λ=1.0)
 Θi=rand(sum(Int,ΘNparams)).*0.24 .-0.12
 res=optimize(C,G,Θi,LBFGS(),inplace = false)
 pn=NNPredict(res.minimizer,LayerStruct)

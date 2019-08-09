@@ -28,7 +28,7 @@ function NNCostGradient(X,y,LayerStruct;λ=0)
 
                     labels=l=Vector(1:LayerStruct[end])'
                     Y=(y.==labels).*1.0
-        J=(-1/m)*sum(Y.*log.(a[end][:,2:end]).+(1 .-Y).*log.(1 .-a[end][:,2:end]))+((λ/2*m).*sum(r))
+        J=(-1/m)*sum(Y.*log.(a[end][:,2:end]).+(1 .-Y).*log.(1 .-a[end][:,2:end]))+((0.5*λ/m).*sum(r))
                     return J
     end
 

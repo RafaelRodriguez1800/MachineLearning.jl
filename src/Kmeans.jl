@@ -9,6 +9,6 @@ function Kmeans(X,k;MaxIter=20)
        Idx[:,i]=FindCentroids(X,C)
         C=ComputeCentroids(X,Idx[:,i])
     end
-
-    return Idx[:,end]
+    Id=round.(Int,Idx[:,end])
+    return Id,C
 end
