@@ -7,7 +7,7 @@ using Distributions
 
 export CostGradient, LogCostGradient, LogPredict, Predict, OneVsAll,
         OneVsAllPredict, MapFeature, PolyFeature,Sigmoid, Kmeans, FindCentroids,
-            ComputeCentroids, SigmoidGradient, NNPredict, NNCostGradient, MeshGrid
+            ComputeCentroids, SigmoidGradient, NNPredict, NNCostGradient, MeshGrid, DataSplit
 
 include("CostGradient.jl")
 include("LogCostGradient.jl")
@@ -23,6 +23,7 @@ include("ComputeCentroids.jl")
 include("NNPredict.jl")
 include("NNCostGradient.jl")
 include("MeshGrid.jl")
+include("DataSplit.jl")
 
 
 

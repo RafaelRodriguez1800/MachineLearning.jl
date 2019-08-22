@@ -19,12 +19,15 @@ end
 function PolyFeature(X,d)
 
     m=size(X,1)
-    p=zeros(m,d)
-
+    n=size(X,2)
+    p=zeros(m,d*n)
+c=0
+for j=1:n
     for i=1:d
-        p[:,i]=X.^i
+        c=c+1
+        p[:,c]=X[:,j].^i
     end
-
+end
     return p
 
 end

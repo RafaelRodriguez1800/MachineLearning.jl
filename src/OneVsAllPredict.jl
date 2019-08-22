@@ -6,7 +6,7 @@ function OneVsAllPredict(Θ;μ=0,σ=1,ξ=0.5)
       s=zeros(m)
       X=(X.-μ)./σ
       X=[ones(m) X]
-      p=sigmoid(X*Θ')
+      p=Sigmoid(X*Θ')
       for i=1:m
            s[i]=argmax(p[i,:])
         end
